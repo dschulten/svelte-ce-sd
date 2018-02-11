@@ -1,13 +1,13 @@
-# svelte app
+# Sveltejs custom-element with shadow-dom in IE11
 
-This is a project template for [Svelte](https://svelte.technology) apps. It lives at https://github.com/sveltejs/template.
+This is a project template for a [Svelte](https://svelte.technology) webcomponent with shadow dom which supports IE11.
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
 npm install -g degit # you only need to do this once
 
-degit sveltejs/template svelte-app
+degit sveltejs/dschulten/svelte-ce-sd
 cd svelte-app
 ```
 
@@ -19,7 +19,7 @@ cd svelte-app
 Install the dependencies...
 
 ```bash
-cd svelte-app
+cd svelte-ce-sd
 npm install
 ```
 
@@ -30,6 +30,13 @@ npm run dev
 ```
 
 Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+
+
+## IE11
+
+Please note that this project includes the [tuespetre/shadow-dom](https://github.com/tuespetre/shadow-dom) polyfill as a static resource in index.html and transpiles classes to ES5 with *Babel*. That combination turned out to be a combination that runs with IE11 and uses a real shadow dom in Chrome.
+
+Buble seems to have an [issue](https://github.com/sveltejs/svelte/issues/1171) caused by the way it transpiles class constructors, at least in the default setup.
 
 
 ## Deploying to the web
