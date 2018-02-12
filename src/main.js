@@ -7,4 +7,4 @@ import App from './App.html';
 // 	}
 // });
 
-export default app;
+// export default app;
